@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/cast_holder"
+            style="@style/filter_holder_style">
+
+            <LinearLayout
+                android:id="@+id/cast_filter"
+                style="@style/filter_dropdown_layout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cast_filter_text"
+                    style="@style/filter_text"
+                    android:text="CAST FILTER" />
+
+            </LinearLayout>
+
+            <View style="@style/filter_inner_line" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_castCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/group_add_cast" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/director_holder"
+            style="@style/filter_holder_style">
+
+            <LinearLayout
+                android:id="@+id/director_filter"
+                style="@style/filter_dropdown_layout">
+
+                <TextView
+                    android:id="@+id/director_filter_text"
+                    style="@style/filter_text"
+                    android:text="DIRECTOR FILTER" />
+
+            </LinearLayout>
+
+            <View style="@style/filter_inner_line" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_directorCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <include layout="@layout/group_add_director" />
+        </LinearLayout>
+
+        <!--  TYPE STARTED  -->
+
+        <LinearLayout
+            android:id="@+id/type_holder"
+            style="@style/filter_holder_style">
+
+            <LinearLayout
+                android:id="@+id/type_filter"
+                style="@style/filter_dropdown_layout">
+
+                <TextView
+                    android:id="@+id/type_filter_text"
+                    style="@style/filter_text"
+                    android:text="TYPE FILTER" />
+
+            </LinearLayout>
+
+            <View style="@style/filter_inner_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_typeCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <include layout="@layout/block_type" />
+        </LinearLayout>
+
+        <!--  TIME FILTER  STARTED  -->
+
+        <LinearLayout
+            android:id="@+id/time_holder"
+            style="@style/filter_holder_style">
+
+            <LinearLayout
+                android:id="@+id/time_filter"
+                style="@style/filter_dropdown_layout">
+
+                <TextView
+                    android:id="@+id/time_filter_text"
+                    style="@style/filter_text"
+                    android:text="TIME FILTER" />
+
+            </LinearLayout>
+
+            <View style="@style/filter_inner_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_timeCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <include layout="@layout/block_numberpicker" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/extra_holder"
+            style="@style/filter_holder_style"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/extra_filter"
+                style="@style/filter_dropdown_layout">
+
+                <TextView
+                    android:id="@+id/extra_filter_text"
+                    style="@style/filter_text"
+                    android:text="EXTRA FILTER" />
+
+            </LinearLayout>
+
+            <View style="@style/filter_inner_line" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/search_layout_button"
+            style="@style/filter_dropdown_layout"
+            android:background="@color/b_orange"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/search_text"
+                style="@style/filter_text"
+                android:text="SEARCH" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filter_display_layout"
+            style="@style/filter_dropdown_layout"
+            android:background="@color/b_yellow"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/filter_display_text"
+                style="@style/filter_text"
+                android:text="SEARCH" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEXT ITEM 1"
+            android:onClick="buttonClick"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEXT ITEM 2"
+            android:onClick="buttonClick"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEXT ITEM 3"
+            android:onClick="buttonClick"
+            android:visibility="gone"/>
+
+        <ListView
+            android:id="@+id/lv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+
+

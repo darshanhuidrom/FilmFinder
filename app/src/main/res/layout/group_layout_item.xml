@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="40dp"
+        android:background="@color/b_sky_blue"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:layout_height="80dp"
+            android:layout_width="80dp"
+            android:padding="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ts_1" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="21sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="BURNISHWAR" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/nd_layout1"
+        style="@style/navigation_layer">
+
+        <ImageView
+            android:id="@+id/nd_icon1"
+            style="@style/navigation_image"
+            android:src="@drawable/ts_1" />
+
+        <TextView
+            android:id="@+id/nd_text1"
+            style="@style/navigation_text"
+            android:text="FIND MOVE" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nd_layout2"
+        style="@style/navigation_layer">
+
+        <ImageView
+            android:id="@+id/nd_icon2"
+            style="@style/navigation_image"
+            android:src="@drawable/ts_2" />
+
+        <TextView
+            android:id="@+id/nd_text2"
+            style="@style/navigation_text"
+            android:text="FIND MOVE" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nd_layout3"
+        style="@style/navigation_layer">
+
+        <ImageView
+            android:id="@+id/nd_icon3"
+            style="@style/navigation_image"
+            android:src="@drawable/ts_3" />
+
+        <TextView
+            android:id="@+id/nd_text3"
+            style="@style/navigation_text"
+            android:text="FIND MOVE" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nd_layout4"
+        style="@style/navigation_layer">
+
+        <ImageView
+            android:id="@+id/nd_icon4"
+            style="@style/navigation_image"
+            android:src="@drawable/ts_4" />
+
+        <TextView
+            android:id="@+id/nd_text4"
+            style="@style/navigation_text"
+            android:text="FIND MOVE" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nd_layout5"
+        style="@style/navigation_layer">
+
+        <ImageView
+            android:id="@+id/nd_icon5"
+            style="@style/navigation_image"
+            android:src="@drawable/ts_5" />
+
+        <TextView
+            android:id="@+id/nd_text5"
+            style="@style/navigation_text"
+            android:text="FIND MOVE" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nd_layout6"
+        style="@style/navigation_layer">
+
+        <ImageView
+            android:id="@+id/nd_icon6"
+            style="@style/navigation_image"
+            android:src="@drawable/ts_6" />
+
+        <TextView
+            android:id="@+id/nd_text6"
+            style="@style/navigation_text"
+            android:text="FIND MOVE" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nd_layout7"
+        style="@style/navigation_layer">
+
+        <ImageView
+            android:id="@+id/nd_icon7"
+            style="@style/navigation_image"
+            android:src="@drawable/ts_7" />
+
+        <TextView
+            android:id="@+id/nd_text7"
+            style="@style/navigation_text"
+            android:text="FIND MOVE" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

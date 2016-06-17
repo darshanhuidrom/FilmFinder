@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">FilmFinder</string>
+    <!-- Nav Drawer-->
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string name="action">Action</string>
+    <string name="comedy">Comedy</string>
+    <string name="drama">Drama</string>
+    <string name="Fantasy">Fantasy</string>
+    <string name="suspense">Suspense</string>
+    <string name="thriller">Thriller</string>
+
+
+    <string-array name="nav_drawer_items">
+        <item>Search Move</item>
+        <item>Youtube Video</item>
+        <item>Extra1</item>
+        <item>Extra2</item>
+        <item>Extra3</item>
+        <item>My Movies</item>
+        <item>Settings</item>
+        <item>Feedback</item>
+    </string-array>
+
+    <array name="nav_drawer_icons">
+        <item>@drawable/ts_1</item>
+        <item>@drawable/ts_2</item>
+        <item>@drawable/ts_3</item>
+        <item>@drawable/ts_4</item>
+        <item>@drawable/ts_5</item>
+        <item>@drawable/ts_6</item>
+        <item>@drawable/ts_7</item>
+    </array>
+
+
+</resources>
