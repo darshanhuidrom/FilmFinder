@@ -5,18 +5,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.RelativeLayout;
 
 import com.kangladevelopers.filmfinder.R;
 
 public class HomePage extends BaseDrawerActivity {
 
+    private RelativeLayout rlCast;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_home_page);
-
+        setWidget();
         setDrawer();
         getDelegate().getSupportActionBar().setTitle("Move Finder");
+
+    }
+
+    private void setWidget() {
+        rlCast = (RelativeLayout) findViewById(R.id.rl_cast);
 
 
     }

@@ -37,7 +37,7 @@
         android:listSelector="@android:color/transparent"
         android:orientation="vertical">
 
-        <include layout="@layout/group_layout_item" />
+        <include layout="@layout/layout_filter" />
 
     </LinearLayout>
 

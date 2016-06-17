@@ -1,3 +1,4 @@
+/*
 package com.kangladevelopers.filmfinder.Network;
 
 import android.content.Context;
@@ -30,9 +31,10 @@ import java.security.MessageDigest;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
+*
  * Created by BURNI on 15/12/15.
- */
+
+
 public class VolleySingelton {
     private static VolleySingelton mInstance;
     private RequestQueue mRequestQueue;
@@ -162,7 +164,7 @@ public class VolleySingelton {
                 });
 
         getRequestQueue().add(jsonRequest);
-        /* new JsonObjectRequest(url, new Response.Listener<JSONArray>() {
+ new JsonObjectRequest(url, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray jsonArray) {
 
@@ -180,7 +182,8 @@ public class VolleySingelton {
             }
         });
 
-        getRequestQueue().add(jsonArrayRequest);*/
+        getRequestQueue().add(jsonArrayRequest);
+
     }
 
 
@@ -217,7 +220,7 @@ public class VolleySingelton {
 
     //-----------------------------------------------------------
 
-  /*  public void getMainDataNew(String barcode){
+  public void getMainDataNew(String barcode){
         String url = Constants.MainURL + "?barcode=" + barcode;
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(url, null, new Response.Listener<JSONObject>(){
             @Override
@@ -258,7 +261,8 @@ public class VolleySingelton {
         };
         getRequestQueue().add(jsonObjectRequest);
     }
-*/
+
+
 
     public void sendStatus(final HashMap<String, String> param){
         JSONObject obj = new JSONObject(param);
@@ -351,3 +355,4 @@ public class VolleySingelton {
     }
 
 }
+*/

@@ -29,13 +29,13 @@ dependencies {
     compile 'com.mikhaellopez:CircularImageView-Library:2.0.1'
     compile 'com.squareup.picasso:picasso:2.4.0'
     compile files('libs/YouTubeAndroidPlayerApi.jar')
-    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.squareup.okhttp:okhttp:2.4.0'
     compile 'com.google.code.gson:gson:2.4'
     compile 'com.squareup.okhttp:okhttp-urlconnection:1.6.0'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
 
 
 }
