@@ -512,7 +512,7 @@ public class Test extends AppCompatActivity implements ListView.OnItemClickListe
         String query = actorList + "&" + directorList + "&" + type;
         Toast.makeText(getApplicationContext(), "query is\n" + query, Toast.LENGTH_LONG).show();
         LogMessage.printLog(TAG, query);
-        Call<List<MovieInfo2>> call = movieInfoRestAdapter.getMovies(actorList);
+      /*  Call<List<MovieInfo2>> call = movieInfoRestAdapter.getMovies(actorList);
         call.enqueue(new retrofit2.Callback<List<MovieInfo2>>() {
             @Override
             public void onResponse(Call<List<MovieInfo2>> call, Response<List<MovieInfo2>> response) {
@@ -523,7 +523,7 @@ public class Test extends AppCompatActivity implements ListView.OnItemClickListe
             public void onFailure(Call<List<MovieInfo2>> call, Throwable t) {
 
             }
-        });
+        });*/
     }
 
 

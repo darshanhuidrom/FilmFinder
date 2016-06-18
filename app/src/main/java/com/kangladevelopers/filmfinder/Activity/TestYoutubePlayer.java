@@ -49,7 +49,7 @@ public class TestYoutubePlayer extends YouTubeBaseActivity implements YouTubePla
         btThumbnail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "onclick", Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(getApplicationContext(), "onclick", Toast.LENGTH_SHORT).show();
                 playerView.setVisibility(View.VISIBLE);
                 ivThumbnail.setVisibility(View.GONE);
                 flThumbnail.setVisibility(View.GONE);

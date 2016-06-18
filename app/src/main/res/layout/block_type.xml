@@ -17,31 +17,37 @@
         <CheckBox
             android:id="@+id/checkBox1"
             style="@style/check_style"
-            android:text="@string/action" />
+            android:text="@string/action"
+            android:checked="true"/>
         <CheckBox
             android:id="@+id/checkBox2"
             style="@style/check_style"
-            android:text="Biopic" />
+            android:text="Biopic"
+            android:checked="true"/>
 
         <CheckBox
             android:id="@+id/checkBox3"
             style="@style/check_style"
+            android:checked="true"
             android:text="@string/comedy" />
 
         <CheckBox
             android:id="@+id/checkBox4"
             style="@style/check_style"
+            android:checked="true"
             android:text="@string/drama" />
 
         <CheckBox
             android:id="@+id/checkBox5"
             style="@style/check_style"
+            android:checked="true"
             android:text="@string/Fantasy" />
 
 
         <CheckBox
             android:id="@+id/checkBox6"
             style="@style/check_style"
+            android:checked="true"
             android:text="@string/thriller" />
 
     </LinearLayout>

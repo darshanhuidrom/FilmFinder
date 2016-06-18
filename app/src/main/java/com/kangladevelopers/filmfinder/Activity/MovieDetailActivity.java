@@ -1,47 +1,93 @@
 package com.kangladevelopers.filmfinder.Activity;
 
-import android.support.v7.app.AppCompatActivity;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.kangladevelopers.filmfinder.DataModel.MoveInfo;
-import com.kangladevelopers.filmfinder.DataModel.MovieInfo2;
+import com.google.android.youtube.player.YouTubeBaseActivity;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerView;
 import com.kangladevelopers.filmfinder.R;
-import com.kangladevelopers.filmfinder.Utility.LogMessage;
+import com.kangladevelopers.filmfinder.pogo.Movie;
+import com.kangladevelopers.filmfinder.utils.Config;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
-public class MovieDetailActivity extends AppCompatActivity {
+public class MovieDetailActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
     private TextView tvDirector,tv_producer,tvSynopsis,tvRuntime,tvBudget,tvBoxoffice,tvStarring,tvType,tvCountry,tvYear;
     private TextView tvRatingImdb,tvRatingRottenTomato,tvRatingMetaCritic;
+    private static final int RECOVERY_DIALOG_REQUEST = 1;
+    private YouTubePlayerView playerView;
+    private ImageView ivThumbnail;
+    private FrameLayout flThumbnail;
+    private Button btThumbnail;
+    private boolean wasRestored;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_move_details);
-        MovieInfo2 moveInfo = (MovieInfo2) getIntent().getSerializableExtra("object");
-        LogMessage.showToast(""+moveInfo.getName()+"\n"+moveInfo.getDirector()+"\n"+moveInfo.getYear());
+        Movie movie = (Movie) getIntent().getSerializableExtra("object");
         mapWithXml();
-        setData(moveInfo);
+        setData(movie);
+        setListener();
     }
 
-    private void setData(MovieInfo2 moveInfo) {
+    private void setListener() {
+        btThumbnail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              //  Toast.makeText(getApplicationContext(), "onclick", Toast.LENGTH_SHORT).show();
+                playerView.setVisibility(View.VISIBLE);
+                ivThumbnail.setVisibility(View.GONE);
+                flThumbnail.setVisibility(View.GONE);
+                playerView.initialize(Config.DEVELOPER_KEY, MovieDetailActivity.this);
+            }
+        });
+    }
+
+    private void setData(Movie moveInfo) {
         tvDirector.setText("Directed by: "+moveInfo.getDirector());
         tv_producer.setText("Produced by: NA");
         tvRuntime.setText("Duration: "+moveInfo.getRuntime());
         tvBudget.setText("Budget: "+moveInfo.getBudget());
-        tvBoxoffice.setText("Box Office: "+moveInfo.getBox_office());
+        tvBoxoffice.setText("Box Office: "+moveInfo.getBoxOffice());
         tvSynopsis.setText("Sypnosis: "+moveInfo.getSynopsis());
         tvRatingImdb.setText(moveInfo.getImdb()+"/10");
-        tvRatingRottenTomato.setText(moveInfo.getRotten_tometo()+"%");
+        tvRatingRottenTomato.setText(moveInfo.getRottenTometo()+"%");
         tvYear.setText("Year: "+moveInfo.getYear());
         tvType.setText("Generie: "+moveInfo.getType());
         tvStarring.setText("Starred by: "+moveInfo.getStarring());
         tvCountry.setText("Country: "+moveInfo.getCountry());
 
+        ImageLoader imageLoader = ImageLoader.getInstance();
+        DisplayImageOptions options = new DisplayImageOptions.Builder()
+                .showImageOnLoading(R.mipmap.ic_launcher)
+                .showImageForEmptyUri(R.mipmap.ic_launcher)
+                .showImageOnFail(R.mipmap.ic_launcher)
+                .cacheInMemory(true)
+                .cacheOnDisk(true)
+                .considerExifParams(true)
+                .bitmapConfig(Bitmap.Config.RGB_565)
+                .build();
+        imageLoader.displayImage("http://img.youtube.com/vi/"+ Config.YOUTUBE_VIDEO_CODE+"/0.jpg", ivThumbnail, options);
+
     }
 
     private void mapWithXml() {
+
+
+        playerView = (YouTubePlayerView) findViewById(R.id.youtube_view);
+        ivThumbnail = (ImageView) findViewById(R.id.iv_thumbnail);
+        flThumbnail = (FrameLayout) findViewById(R.id.fl_thumbnail);
+        btThumbnail = (Button) findViewById(R.id.bt_thumbnail);
+
         tvDirector = (TextView) findViewById(R.id.tv_director);
         tv_producer = (TextView) findViewById(R.id.tv_producer);
         tvSynopsis = (TextView) findViewById(R.id.tv_synopsis);
@@ -55,5 +101,24 @@ public class MovieDetailActivity extends AppCompatActivity {
         tvRatingRottenTomato = (TextView) findViewById(R.id.tv_rotten_tomato);
         tvRatingMetaCritic = (TextView) findViewById(R.id.tv_rating_meta_critic);
         tvCountry = (TextView) findViewById(R.id.tv_country);
+
+    }
+
+    @Override
+    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+        if (!wasRestored) {
+
+            // loadVideo() will auto play video
+            // Use cueVideo() method, if you don't want to play it automatically
+            youTubePlayer.loadVideo(Config.YOUTUBE_VIDEO_CODE);
+
+            // Hiding player controls
+            //  player.setPlayerStyle(YouTubePlayer.PlayerStyle.CHROMELESS);
+        }
+    }
+
+    @Override
+    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
+
     }
 }

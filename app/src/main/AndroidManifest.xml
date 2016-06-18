@@ -28,8 +28,10 @@
             android:name=".Activity.TestYoutubePlayer"
             android:configChanges="orientation|screenSize" />
         <activity android:name=".Activity.MovieListActivity" />
-        <activity android:name=".Activity.MovieDetailActivity" />
-        <activity android:name=".Activity.ShowBookDetailsActivity"></activity>
+        <activity android:name=".Activity.MovieDetailActivity"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name=".Activity.ShowBookDetailsActivity" />
+        <activity android:name=".Activity.TestActivity"></activity>
     </application>
 
 </manifest>
