@@ -45,7 +45,7 @@
     <style name="filter_dropdown_layout">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">45dp</item>
-        <item name="android:background">@color/b_green</item>
+        <item name="android:background">@color/white</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:gravity">center_vertical</item>
