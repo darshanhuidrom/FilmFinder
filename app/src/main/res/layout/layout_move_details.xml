@@ -4,7 +4,35 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/toolbar_shadow_layout" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/left_arrow"
+            android:onClick="onBack" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Movie Details"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+
+
+
+
+
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -28,63 +56,185 @@
                     android:layout_weight="2"
                     android:orientation="vertical"
                     android:padding="8dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            style="@style/move_details_text"
+                            android:text="Directed by:"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/tv_director"
+                            style="@style/move_details_text" />
 
-                    <TextView
-                        android:id="@+id/tv_director"
-                        style="@style/move_details_text"
-                        android:text="Directed by: " />
-
-                    <TextView
-                        android:id="@+id/tv_producer"
-                        style="@style/move_details_text"
-                        android:text="Produce by:" />
-
-                    <TextView
-                        android:id="@+id/tv_stare"
-                        style="@style/move_details_text"
-                        android:text="Starred by:" />
-
-                    <TextView
-                        android:id="@+id/tv_type"
-                        style="@style/move_details_text"
-                        android:text="Generie: " />
-
-                    <TextView
-                        android:id="@+id/tv_year"
-                        style="@style/move_details_text"
-                        android:text="Year: " />
-
-                    <TextView
-                        android:id="@+id/tv_country"
-                        style="@style/move_details_text"
-                        android:text="Country: " />
-
-                    <TextView
-                        android:id="@+id/tv_synopsis"
-                        style="@style/move_details_text"
-                        android:text="Synopsis: " />
-
-                    <TextView
-                        android:id="@+id/tv_runtime"
-                        style="@style/move_details_text"
-                        android:text="Running time: 117 minutes" />
-
-                    <TextView
-                        android:id="@+id/tv_budget"
-                        style="@style/move_details_text"
-                        android:text="Budget: $65 million" />
-
-                    <TextView
-                        android:id="@+id/tv_boxoffice"
-                        style="@style/move_details_text"
-                        android:text="Box office : 	$456.1 million" />
-
-                    <TextView
-                        android:id="@+id/tv_release_date"
-                        style="@style/move_details_text"
-                        android:text="Releasing Date: " />
+                    </LinearLayout>
 
 
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            style="@style/move_details_text"
+                            android:text="Produce by:"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/tv_producer"
+                            style="@style/move_details_text"
+                            />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            style="@style/move_details_text"
+                            android:text="Starred by:"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/tv_stare"
+                            style="@style/move_details_text"
+                             />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            style="@style/move_details_text"
+                            android:text="Generie:"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/tv_type"
+                            style="@style/move_details_text" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            style="@style/move_details_text"
+                            android:text="Year:"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/tv_year"
+                            style="@style/move_details_text"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            style="@style/move_details_text"
+                            android:text="Country:"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/tv_country"
+                            style="@style/move_details_text"
+                             />
+
+                    </LinearLayout>
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            style="@style/move_details_text"
+                            android:text="Running time:"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/tv_runtime"
+                            style="@style/move_details_text" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            style="@style/move_details_text"
+                            android:text="Budget:"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/tv_budget"
+                            style="@style/move_details_text"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            style="@style/move_details_text"
+                            android:text="Box office:"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/tv_boxoffice"
+                            style="@style/move_details_text" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            style="@style/move_details_text"
+                            android:text="Releasing Date:"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/tv_release_date"
+                            style="@style/move_details_text" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            style="@style/move_details_text"
+                            android:text="Synopsis:"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/tv_synopsis"
+                            style="@style/move_details_text" />
+
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
@@ -97,11 +247,13 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/mov_icon" />
+                        android:src="@drawable/mov_icon"
+                        android:scaleType="fitStart"/>
 
                 </LinearLayout>
 
             </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -142,10 +294,10 @@
 
                     <Button
                         android:id="@+id/bt_thumbnail"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_gravity="center"
-                        android:background="@android:drawable/ic_media_play" />
+                        android:background="@drawable/youtube_icon" />
                 </FrameLayout>
             </RelativeLayout>
 

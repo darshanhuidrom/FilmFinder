@@ -43,7 +43,7 @@ public class MovieDetailActivity extends YouTubeBaseActivity implements YouTubeP
         btThumbnail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              //  Toast.makeText(getApplicationContext(), "onclick", Toast.LENGTH_SHORT).show();
+                //  Toast.makeText(getApplicationContext(), "onclick", Toast.LENGTH_SHORT).show();
                 playerView.setVisibility(View.VISIBLE);
                 ivThumbnail.setVisibility(View.GONE);
                 flThumbnail.setVisibility(View.GONE);
@@ -53,18 +53,18 @@ public class MovieDetailActivity extends YouTubeBaseActivity implements YouTubeP
     }
 
     private void setData(Movie moveInfo) {
-        tvDirector.setText("Directed by: "+moveInfo.getDirector());
-        tv_producer.setText("Produced by: NA");
-        tvRuntime.setText("Duration: "+moveInfo.getRuntime());
-        tvBudget.setText("Budget: "+moveInfo.getBudget());
-        tvBoxoffice.setText("Box Office: "+moveInfo.getBoxOffice());
-        tvSynopsis.setText("Sypnosis: "+moveInfo.getSynopsis());
+        tvDirector.setText(" "+moveInfo.getDirector());
+        tv_producer.setText(" NA");
+        tvRuntime.setText(" "+moveInfo.getRuntime());
+        tvBudget.setText(" "+moveInfo.getBudget());
+        tvBoxoffice.setText(" "+moveInfo.getBoxOffice());
+        tvSynopsis.setText(" "+moveInfo.getSynopsis());
         tvRatingImdb.setText(moveInfo.getImdb()+"/10");
         tvRatingRottenTomato.setText(moveInfo.getRottenTometo()+"%");
-        tvYear.setText("Year: "+moveInfo.getYear());
-        tvType.setText("Generie: "+moveInfo.getType());
-        tvStarring.setText("Starred by: "+moveInfo.getStarring());
-        tvCountry.setText("Country: "+moveInfo.getCountry());
+        tvYear.setText(" "+moveInfo.getYear());
+        tvType.setText(" "+moveInfo.getType());
+        tvStarring.setText(" "+moveInfo.getStarring());
+        tvCountry.setText(" "+moveInfo.getCountry());
 
         ImageLoader imageLoader = ImageLoader.getInstance();
         DisplayImageOptions options = new DisplayImageOptions.Builder()
@@ -120,5 +120,8 @@ public class MovieDetailActivity extends YouTubeBaseActivity implements YouTubeP
     @Override
     public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
 
+    }
+    public void onBack(View view){
+        finish();
     }
 }

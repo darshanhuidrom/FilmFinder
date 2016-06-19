@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="10dp">
+           >
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,312 +53,321 @@
 
             </LinearLayout>
 
-            <RelativeLayout
-                android:id="@+id/rl_cast"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:onClick="filterConditionClick"
-                android:animateLayoutChanges="true">
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:src="@mipmap/ic_launcher" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Starring"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:id="@+id/tv_starr"
-                    android:layout_marginLeft="20dp"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/imageView2"
-                    android:layout_toEndOf="@+id/imageView2" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:textColor="#ffffff"
-                    android:background="@drawable/rounded_red"
-                    android:id="@+id/tv_actors_count"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
-            </RelativeLayout>
-            <View android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#cdcdcd"/>
-
             <LinearLayout
-                android:id="@+id/ll_castCondition"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:orientation="vertical"
+                android:animateLayoutChanges="true">
+                <RelativeLayout
+                    android:id="@+id/rl_cast"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:onClick="filterConditionClick"
+                   >
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Starring"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:id="@+id/tv_starr"
+                        android:layout_marginLeft="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imageView2"
+                        android:layout_toEndOf="@+id/imageView2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/rounded_red"
+                        android:id="@+id/tv_actors_count"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cdcdcd"/>
 
                 <LinearLayout
-                    android:id="@+id/ll_cast_layout"
+                    android:id="@+id/ll_castCondition"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:id="@+id/ll_actor_parent_layout"
+                        android:id="@+id/ll_cast_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_actor_parent_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        </LinearLayout>
+                        <include layout="@layout/layout_auto_complete_text" />
                     </LinearLayout>
-                    <include layout="@layout/layout_auto_complete_text" />
                 </LinearLayout>
-            </LinearLayout>
 
 
-            <RelativeLayout
-                android:id="@+id/rl_director"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:onClick="filterConditionClick"
-                android:animateLayoutChanges="true">
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:src="@mipmap/ic_launcher" />
+                <RelativeLayout
+                    android:id="@+id/rl_director"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:onClick="filterConditionClick"
+                    android:animateLayoutChanges="true">
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_launcher" />
 
-                <TextView
+                    <TextView
 
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Director"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:id="@+id/tv_director"
-                    android:layout_marginLeft="20dp"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/imageView3"
-                    android:layout_toEndOf="@+id/imageView3" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Director"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:id="@+id/tv_director"
+                        android:layout_marginLeft="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imageView3"
+                        android:layout_toEndOf="@+id/imageView3" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:textColor="#ffffff"
-                    android:background="@drawable/rounded_red"
-                    android:id="@+id/tv_director_count"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
-            </RelativeLayout>
-            <View android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#cdcdcd"/>
-
-            <LinearLayout
-                android:id="@+id/ll_directorCondition"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/rounded_red"
+                        android:id="@+id/tv_director_count"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cdcdcd"/>
 
                 <LinearLayout
-                    android:id="@+id/ll_director_layout"
+                    android:id="@+id/ll_directorCondition"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:id="@+id/ll_director_parent_layout"
+                        android:id="@+id/ll_director_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_director_parent_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        </LinearLayout>
+                        <AutoCompleteTextView
+                            android:id="@+id/actv_director"
+                            android:layout_margin="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:background="@color/b_whiteGreny" />
                     </LinearLayout>
-                    <AutoCompleteTextView
-                        android:id="@+id/actv_director"
-                        android:layout_margin="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="24dp"
-                        android:background="@color/b_whiteGreny" />
                 </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:onClick="filterConditionClick"
+                    android:animateLayoutChanges="true">
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Type"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:id="@+id/tv_type"
+                        android:layout_marginLeft="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imageView4"
+                        android:layout_toEndOf="@+id/imageView4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/rounded_red"
+                        android:id="@+id/tv_type_count"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cdcdcd"/>
+                <LinearLayout
+                    android:id="@+id/ll_typeCondition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/block_type" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:onClick="filterConditionClick"
+                    android:animateLayoutChanges="true">
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Year"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:id="@+id/tv_year"
+                        android:layout_marginLeft="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imageView5"
+                        android:layout_toEndOf="@+id/imageView5" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/rounded_red"
+                        android:id="@+id/tv_year_count"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cdcdcd"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_timeCondition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/block_numberpicker" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:onClick="filterConditionClick"
+                    android:animateLayoutChanges="true">
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Other"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:id="@+id/tv_other"
+                        android:layout_marginLeft="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imageView6"
+                        android:layout_toEndOf="@+id/imageView6" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/rounded_red"
+                        android:id="@+id/tv_other_count"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cdcdcd"/>
+                <Button
+                    android:layout_marginTop="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:onClick="onSubmit"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/bt_submit" />
+
             </LinearLayout>
-
-            <RelativeLayout
-                android:id="@+id/rl_type"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:onClick="filterConditionClick"
-                android:animateLayoutChanges="true">
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:src="@mipmap/ic_launcher" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Type"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:id="@+id/tv_type"
-                    android:layout_marginLeft="20dp"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/imageView4"
-                    android:layout_toEndOf="@+id/imageView4" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:textColor="#ffffff"
-                    android:background="@drawable/rounded_red"
-                    android:id="@+id/tv_type_count"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
-            </RelativeLayout>
-            <View android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#cdcdcd"/>
-            <LinearLayout
-                android:id="@+id/ll_typeCondition"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:animateLayoutChanges="true"
-                android:orientation="vertical">
-
-                <include layout="@layout/block_type" />
-            </LinearLayout>
-
-            <RelativeLayout
-                android:id="@+id/rl_year"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:onClick="filterConditionClick"
-                android:animateLayoutChanges="true">
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:src="@mipmap/ic_launcher" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Year"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:id="@+id/tv_year"
-                    android:layout_marginLeft="20dp"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/imageView5"
-                    android:layout_toEndOf="@+id/imageView5" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:textColor="#ffffff"
-                    android:background="@drawable/rounded_red"
-                    android:id="@+id/tv_year_count"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
-            </RelativeLayout>
-            <View android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#cdcdcd"/>
-
-            <LinearLayout
-                android:id="@+id/ll_timeCondition"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:animateLayoutChanges="true"
-                android:orientation="vertical">
-
-                <include layout="@layout/block_numberpicker" />
-            </LinearLayout>
-
-            <RelativeLayout
-                android:id="@+id/rl_other"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:onClick="filterConditionClick"
-                android:animateLayoutChanges="true">
-                <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:src="@mipmap/ic_launcher" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Other"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:id="@+id/tv_other"
-                    android:layout_marginLeft="20dp"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/imageView6"
-                    android:layout_toEndOf="@+id/imageView6" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:textColor="#ffffff"
-                    android:background="@drawable/rounded_red"
-                    android:id="@+id/tv_other_count"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
-            </RelativeLayout>
-            <View android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#cdcdcd"/>
-            <Button
-                android:layout_marginTop="50dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Submit"
-                android:onClick="onSubmit"
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/bt_submit" />
 
 
         </LinearLayout>

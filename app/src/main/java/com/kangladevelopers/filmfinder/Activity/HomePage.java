@@ -322,7 +322,7 @@ public class HomePage extends BaseDrawerActivity {
         ImageView actorImage = (ImageView) view.findViewById(R.id.iv_director);
         viewDirectorList.add(view);
         llDirectorParentLayout.addView(view);
-        tvDirectorCount.setText("" + viewActorList.size());
+        tvDirectorCount.setText("" + viewDirectorList.size());
         actorName.setText(DirectorNamee);
         ImageLoader imageLoader = ImageLoader.getInstance();
         DisplayImageOptions options = new DisplayImageOptions.Builder()

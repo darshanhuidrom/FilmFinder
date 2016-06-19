@@ -33,7 +33,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:onClick="onDeleteClick"
-        android:src="@drawable/delete"/>
+        android:src="@android:drawable/ic_delete"/>
     <View android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#cdcdcd"
